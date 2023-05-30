@@ -13,7 +13,7 @@ x = int(input("Введите число, совпадения по которо
 count = 0
 
 for _ in range(n):
-    list_n.append(int(input(f"Введите число №{_}: ")))
+    list_n.append(int(input(f"Введите число №{_ + 1}: ")))
 
 print(list_n)
 

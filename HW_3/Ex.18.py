@@ -4,3 +4,25 @@
 # N = 5
 # A = 1 2 3 4 5
 # X = 6 -> 5
+
+n = int(input("Введите колличество элементов в списке: "))
+list_n = []
+
+x = int(input("Введите число, совпадения по которому будет найдено: "))
+
+
+for _ in range(n):
+    list_n.append(int(input(f"Введите число №{_ + 1}: ")))
+
+print(list_n)
+
+min = abs(x - list_n[0])
+
+index = 0
+
+for i in range(1, n):
+    count = abs(x - list_n[i])
+    if count < min:
+        min = count
+        index = i
+print(f'Число {list_n[index]} в списке наиболее близко по величине к числу {x}')
